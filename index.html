@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap" rel="stylesheet">
+    <title>文言文随机</title>
+
+    <style>
+        body{
+            font-family: 'Noto Sans HK', sans-serif;
+            /* font-family: 'Ma Shan Zheng', cursive; */
+            /* font-family: 'Noto Sans HK', sans-serif; */
+        }
+        a{
+            text-decoration: none;
+            color: #000000;
+            font-size: 16px;
+        }
+        table{
+            width: 100%;
+            text-align: center;
+
+            /* border-bottom: #123B57 10px solid; */
+        }
+        tr,td{
+            width: 33%;
+        }
+        h2{
+            margin-top: 20px;
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+        p{
+            line-height: 30px;
+        }
+
+
+        #head_line{margin-top: 20px;}
+        .material-symbols-outlined {
+            font-size: 40px;
+            /* margin-right: 10px; */
+            text-align: right;
+            float: right;
+
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 300,
+            'GRAD' 0,
+            'opsz' 48
+        }
+        #night{float: right;}
+        #light{
+            float: right;
+            color: #ffffff;
+            display: none;
+        }
+        #title_page{
+            margin-top: 0px;
+            margin-left: 10px;
+
+            font-size: 26px;
+            float: left;
+        }
+        #a{
+            color: #ffffff;
+            display: none;
+            float: left;
+
+            position: absolute;
+            /* transition-duration: 1s; */
+            top: 0%;
+            z-index: 999;
+        }
+        #b{
+            color: #ffffff;
+            display: none;
+            float: left;
+
+            position: absolute;
+            /* transition-duration: 1s; */
+            top: 0%;
+            z-index: 999;
+        }
+        #back{
+            display: none;
+            float: left;
+            /* margin-right: 20px; */
+            /* margin-top: 0px; */
+            
+            color: #ffffff;
+            
+            position: absolute;
+            /* top: 0%; */
+            left: 76%;
+            z-index: 999;
+        }
+
+        #for_article{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .same_between{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+
+        #tree{
+            width: 100%;
+            display: none;
+
+            /* float: right; */
+            /* margin-right: -11px; */
+            /* margin-top: 11px; */
+            
+            position: absolute;
+            bottom: 0%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 1;
+        }
+        #tu{
+            width: 60px;
+            position: absolute;
+            top: 35%;
+            left: 17%;
+            transform: translate(-50%,-50%);
+
+            z-index: 999;
+            display: none;
+        }
+        #dog{
+            width: 80px;
+            position: absolute;
+            top: 35%;
+            right: 0%;
+            transform: translate(-30%,-50%);
+            
+            z-index: 999;
+            display: none;
+        }
+    </style>
+</head>
+<body id="background_color">
+    <div id="head_line">
+        <div id="other_page">
+            <h1 id="title_page" style="border-left: 10px solid #123B57;">&nbsp;&nbsp;课文</h1>
+            <div id="move_choose">
+                <a href="https://cogito-ergo-sum.w3spaces.com/check_classical_chinese_final.html"><h1 id="a">查字词</h1></a>
+                <a href="https://infinitymark.github.io/random_classical_chinese_test.github.io/"><h1 id="b">随机字词</h1></a>
+                <h1 id="back">返回</h1>    
+            </div>    
+            <img src="https://raw.githubusercontent.com/infinityMark/-infinityMark.github.io/main/tree.png" alt="" id="tree">
+        </div>
+        <span class="material-symbols-outlined" id="night">dark_mode</span>
+        <span class="material-symbols-outlined" id="light">light_mode</span>
+    </div>
+    <br>
+    <div id="article_choose">
+        <table>
+            <tr>
+                <td><a href="#teacher_said"><p id="teacher_said_word">师说</p></a></td>
+                <td><a href="#house_said"><p id="house_said_word">岳阳楼记</p></a></td>
+                <td><a href="#hiking"><p id="hiking_word">始得西山宴游记</p></a></td>           
+            </tr>
+            <tr>
+                <!-- <td><a href=""><p>论仁论孝论君子</p></a></td> -->
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div id="for_article">
+        <div class="same_between">
+            <h2 id="teacher_said">师说</h2>
+            <h3>韩愈&nbsp;&nbsp;[唐朝]</h3>
+            <a href="#title_page" style="color: #878787;"><span class="material-symbols-outlined">home</span></a>
+            <br><br>
+            <p>&nbsp;&nbsp;&nbsp;古之学者必有师。师者，所以传道受业解惑也。人非生而知之者，孰能无惑？惑而不从师，其为惑也，终不解矣。生乎吾前，其闻道也固先乎吾，吾从而师之；生乎吾后，其闻道也亦先乎吾，吾从而师之。吾师道也，夫庸知其年之先后生于吾乎？是故无贵无贱，无长无少，道之所存，师之所存也。</p>
+            <p>&nbsp;&nbsp;&nbsp;嗟乎！师道之不传也久矣！欲人之无惑也难矣！古之圣人，其出人也远矣，犹且从师而问焉；今之众人，其下圣人也亦远矣，而耻学于师。是故圣益圣，愚益愚。圣人之所以为圣，愚人之所以为愚，其皆出于此乎？爱其子，择师而教之；于其身也，则耻师焉，惑矣。彼童子之师，授之书而习其句读者，非吾所谓传其道解其惑者也。句读之不知，惑之不解，或师焉，或不焉，小学而大遗，吾未见其明也。巫医乐师百工之人，不耻相师。士大夫之族，曰师曰弟子云者，则群聚而笑之。问之，则曰：“彼与彼年相若也，道相似也，位卑则足羞，官盛则近谀。”呜呼！师道之不复，可知矣。巫医乐师百工之人，君子不齿，今其智乃反不能及，其可怪也欤！</p>
+            <p>&nbsp;&nbsp;&nbsp;圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。</p>
+            <p>&nbsp;&nbsp;&nbsp;李氏子蟠，年十七，好古文，六艺经传皆通习之，不拘于时，学于余。余嘉其能行古道，作《师说》以贻之。</p>
+        </div>
+
+        <div class="same_between">
+            <h2 id="house_said">岳阳楼记</h2>
+            <h3>范仲淹&nbsp;&nbsp;[宋代]</h3>
+            <a href="#title_page" style="color: #878787;"><span class="material-symbols-outlined">home</span></a>
+            <br>
+            <br>
+            <p>&nbsp;&nbsp;&nbsp;庆历四年春，滕子京谪守巴陵郡。越明年，政通人和，百废具兴，乃重修岳阳楼，增其旧制，刻唐贤今人诗赋于其上，属予作文以记之。</p>
+            <p>&nbsp;&nbsp;&nbsp;予观夫巴陵胜状，在洞庭一湖。衔远山，吞长江，浩浩汤汤，横无际涯，朝晖夕阴，气象万千，此则岳阳楼之大观也，前人之述备矣。然则北通巫峡，南极潇湘，迁客骚人，多会于此，览物之情，得无异乎？</p>
+            <p>&nbsp;&nbsp;&nbsp;若夫淫雨霏霏，连月不开，阴风怒号，浊浪排空，日星隐曜，山岳潜形，商旅不行，樯倾楫摧，薄暮冥冥，虎啸猿啼。登斯楼也，则有去国怀乡，忧谗畏讥，满目萧然，感极而悲者矣。</p>
+            <p>&nbsp;&nbsp;&nbsp;至若春和景明，波澜不惊，上下天光，一碧万顷，沙鸥翔集，锦鳞游泳，岸芷汀兰，郁郁青青。而或长烟一空，皓月千里，浮光跃金，静影沉璧，渔歌互答，此乐何极！登斯楼也，则有心旷神怡，宠辱偕忘，把酒临风，其喜洋洋者矣。</p>
+            <p>&nbsp;&nbsp;&nbsp;嗟夫！予尝求古仁人之心，或异二者之为，何哉？不以物喜，不以己悲，居庙堂之高则忧其民，处江湖之远则忧其君。是进亦忧，退亦忧。然则何时而乐耶？其必曰“先天下之忧而忧，后天下之乐而乐”乎！噫！微斯人，吾谁与归？</p>
+            <p>&nbsp;&nbsp;&nbsp;时六年九月十五日。</p>
+        </div>
+
+        <div class="same_between">
+            <h2 id="hiking">始得西山宴游记</h2>
+            <h3>柳宗元&nbsp;&nbsp;[唐朝]</h3>
+            <a href="#title_page" style="color: #878787;"><span class="material-symbols-outlined">home</span></a>
+            <br>
+            <br>
+            <p>&nbsp;&nbsp;&nbsp;自余为僇人，居是州，恒惴慄。其隟也，则施施而行，漫漫而游。日与其徒上高山，入深林，穷回溪，幽泉怪石，无远不到。到则披草而坐，倾壶而醉。醉则更相枕以卧，卧而梦。意有所极，梦亦同趣。觉而起，起而归；以为凡是州之山水有异态者，皆我有也，而未始知西山之怪特。</p>
+            <p>&nbsp;&nbsp;&nbsp;今年九月二十八日，因坐法华西亭，望西山，始指异之。遂命仆人过湘江，缘染溪，斫榛莽，焚茅茷，穷山之高而止。攀援而登，箕踞而遨，则凡数州之土壤，皆在衽席之下。其高下之势，岈然洼然，若垤若穴，尺寸千里，攒蹙累积，莫得遁隐。萦青缭白，外与天际，四望如一。然后知是山之特立，不与培塿为类。悠悠乎与颢气俱，而莫得其涯；洋洋乎与造物者游，而不知其所穷。引觞满酌，颓然就醉，不知日之入。苍然暮色，自远而至，至无所见，而犹不欲归。心凝形释，与万化冥合。然后知吾向之未始游，游于是乎始。故为之文以志。是岁，元和四年也。</p>
+        </div>
+    </div>
+
+    <script>
+        // <div class="same_between">
+        //     <h2 id="teacher_said">师说</h2>
+        //     <h3>&nbsp;&nbsp;</h3>
+        //     <p>&nbsp;&nbsp;&nbsp;</p>
+        // </div>
+        // postMessage("google.com")
+
+        let night=document.getElementById("night")
+        let light=document.getElementById("light")
+        let title_page=document.getElementById("title_page")
+        let background_color=document.getElementById("background_color")
+        let dog=document.getElementById("dog")
+        let tu=document.getElementById("tu")
+        let time="1s"
+        let white="#ffffff"
+        let black="#000000"
+        let dark="#1c1c1c"
+
+        let article_choose=document.getElementById("article_choose")
+        let for_article=document.getElementById("for_article")
+        let teacher_said_word=document.getElementById("teacher_said_word")
+        let house_said_word=document.getElementById("house_said_word")
+        let hiking_word=document.getElementById("hiking_word")
+
+        // if(window.innerWidth==394 || window.innerWidth==393){
+        //     tu.style.display="flex"
+
+        //     dog.style.display="flex"
+        // }
+        // if(window.innerWidth==390 || window.innerWidth==391){
+        //     tu.style.display="flex"
+        //     tu.style.top="31%"
+        // }
+        night.addEventListener("click",function(){
+            background_color.style.transitionDuration="1s"
+            background_color.style.backgroundColor=dark
+            night.style.color=white
+            night.style.display="none"
+
+            light.style.display="flex"
+
+            title_page.style.transitionDuration=time
+            title_page.style.color=white
+
+            background_color.style.color=white
+
+            teacher_said_word.style.transitionDuration=time
+            teacher_said_word.style.color=white
+
+            house_said_word.style.transitionDuration=time
+            house_said_word.style.color=white
+
+            hiking_word.style.transitionDuration=time
+            hiking_word.style.color=white
+        })
+        light.addEventListener("click",function(){
+            background_color.style.transitionDuration="1s"
+            background_color.style.backgroundColor=white
+            night.style.color="#000000"
+            light.style.display="none"
+
+            night.style.display="flex"
+
+            title_page.style.transitionDuration=time
+            title_page.style.color="#000000"
+
+            background_color.style.color="#000000"
+
+            teacher_said_word.style.transitionDuration=time
+            teacher_said_word.style.color=black
+
+            house_said_word.style.transitionDuration=time
+            house_said_word.style.color=black
+
+            hiking_word.style.transitionDuration=time
+            hiking_word.style.color=black
+        })
+
+        let a=document.getElementById("a")
+        let b=document.getElementById("b")
+        let back=document.getElementById("back")
+        let the_final_return=document.getElementById("the_final_return")
+        let tree=document.getElementById("tree")
+        title_page.addEventListener("click",function(){
+            //切换回亮色模式
+            // if(the_final_return.style.display!="none"){
+            //     the_final_return.style.display="none"
+            // }
+            
+            background_color.style.transitionDuration="1s"
+            background_color.style.backgroundColor=white
+            night.style.color="#000000"
+            light.style.display="none"
+            night.style.display="flex"
+            title_page.style.transitionDuration=time
+            title_page.style.color="#000000"
+
+            title_page.style.transitionDuration=time
+            title_page.style.color=white
+            title_page.style.marginTop="100px"
+            title_page.style.fontSize="36px"
+
+            a.style.transitionDuration=time
+            a.style.display="block"
+            b.style.transitionDuration=time
+            b.style.display="block"
+            // a.style.marginTop="200px"
+            
+            a.style.marginLeft="40px"  
+            b.style.marginLeft="40px"
+
+            back.style.transitionDuration="0.8s"
+            back.style.display="flex"
+            setTimeout(test,10)
+            function test(){
+                back.style.marginTop="100px"
+                tree.style.bottom="-37%"
+
+                a.style.top="30%"
+                b.style.top="50%"
+            }
+            back.style.float="right"
+
+            // title_page.style.float="none"
+
+            night.style.transitionDuration=time
+            night.style.display="none"
+
+            background_color.style.transitionDuration=time
+            background_color.style.backgroundColor="#123b75"
+
+            // dog.style.display="none"
+            // tu.style.display="none"
+
+            tree.style.display="flex"
+            tree.style.transitionDuration=time
+            // if(window.innerWidth==394 || window.innerWidth==393){
+            //     tree.style.marginBottom="-30px"
+            // }
+
+            article_choose.style.display="none"
+            for_article.style.display="none"
+        })
+
+        back.addEventListener("click",function(){
+            title_page.style.transitionDuration=time
+            title_page.style.color="#000000"
+            title_page.style.marginTop="0px"
+            title_page.style.fontSize="26px"
+
+            night.style.transitionDuration=time
+            setTimeout(app,700)
+            function app(){
+                night.style.display="flex"    
+            }
+            
+            back.style.marginTop="0px"   
+            setTimeout(test,500)
+            function test(){
+                // back.style.top="0%"
+                back.style.display="none"
+                tree.style.bottom="0%"
+                a.style.top="0%"
+
+                b.style.top="0%"
+            }
+            
+            a.style.transitionDuration=time
+            a.style.display="none"
+
+            b.style.transitionDuration=time
+            b.style.display="none"
+
+            background_color.style.backgroundColor=white
+
+            tree.style.display="none"
+
+            article_choose.style.display="block"
+            for_article.style.display="block"
+            
+            if(window.innerWidth==394 || window.innerWidth==393){
+                tu.style.display="flex"
+                dog.style.display="flex"
+            }
+            if(window.innerWidth==391 || window.innerWidth==390){
+                tu.style.display="flex"
+                dog.style.display="none"
+                
+            }
+        })
+    </script>
+</body>
+</html>
