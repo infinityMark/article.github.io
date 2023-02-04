@@ -70,6 +70,17 @@
             font-size: 26px;
             float: left;
         }
+        #big_title_page{
+            color: #000000;
+            margin-top: 0px;
+            margin-left: 10px;
+
+            font-size: 40px;
+            float: left;
+
+            border-left: 14px solid #6386a6;
+            display: none;
+        }
         #a{
             color: #ffffff;
             display: none;
@@ -159,6 +170,11 @@
             #title_page{
                 border-left: 14px solid #123B57;
                 font-size: 40px;
+
+                display: none;
+            }
+            #big_title_page{
+                display: inline;
             }
             .material-symbols-outlined{
                 font-size: 100px;
@@ -181,6 +197,9 @@
                 color: #000000;
                 margin-left: 0px;
             }
+            #choose_table{
+                border-left: 14px solid #e57e17;
+            }
 
             #article_choose{
                 width: 70%;
@@ -194,6 +213,16 @@
             .verse{
                 display: none;
             }
+            p{
+                line-height: 60px;
+                font-size: 24px;
+            }
+            h2{
+                font-size: 40px;
+            }
+            h3{
+                font-size: 30px;
+            }
         }
     </style>
 </head>
@@ -201,6 +230,7 @@
     <div id="head_line">
         <div id="other_page">
             <h1 id="title_page" style="border-left: 10px solid #123B57;">&nbsp;&nbsp;课文</h1>
+            <h1 id="big_title_page">&nbsp;&nbsp;课文</h1>
             <div id="move_choose">
                 <a href="https://infinitymark.github.io/check_classical_chinese_final.github.io/"><h1 id="a">查字词</h1></a>
                 <a href="https://infinitymark.github.io/random_classical_chinese_test.github.io/"><h1 id="b">随机字词</h1></a>
@@ -214,7 +244,7 @@
     <br>
     <br>
     <div id="article_choose">
-        <table>
+        <table id="choose_table">
             <tr>
                 <td><a href="#teacher_said"><p id="teacher_said_word">师说</p></a></td>
                 <td><a href="#house_said"><p id="house_said_word">岳阳楼记</p></a></td>
@@ -226,14 +256,14 @@
                 <!-- <td><a href="#hahaha"><p>诗三首</p></a></td> -->
             </tr>
             <tr>
-                <td><a href=""><p>山居秋暝</p></a></td>
-                <td><a href=""><p>月下独酌</p></a></td>
-                <td><a href=""><p>登楼</p></a></td>
+                <td><a href="#mountain"><p id="mountain_word">山居秋暝</p></a></td>
+                <td><a href="#moon"><p id="moon_word">月下独酌</p></a></td>
+                <td><a href="#house"><p id="house_word">登楼</p></a></td>
             </tr>
             <tr>
-                <td><a href=""><p>念奴娇·赤壁怀古</p></a></td>
-                <td><a href=""><p>声声慢·寻寻觅觅</p></a></td>
-                <td><a href=""><p>青玉案·元夕</p></a></td>
+                <td><a href="#chibi"><p id="chibi_word">念奴娇·赤壁怀古</p></a></td>
+                <td><a href="#slow"><p id="slow_word">声声慢·寻寻觅觅</p></a></td>
+                <td><a href="#first_day"><p id="first_day_word">青玉案·元夕</p></a></td>
             </tr>
         </table>
     </div>
@@ -244,7 +274,7 @@
             <h3>韩愈&nbsp;&nbsp;[唐朝]</h3>
             <table>
                 <tr>
-                    <td><h2 style="float: left;">约549字</h2></td><td><a href="#title_page" style="color: #878787;"><span class="material-symbols-outlined">home</span></a></td>
+                    <td><h2 style="float: left;">约549字</h2></td><td><a href="#title_page" style="color: #878787;"><span class="material-symbols-outlined" >home</span></a></td>
                 </tr>
             </table>
             <!-- <br><br> -->
@@ -290,7 +320,7 @@
                     <td><h2 style="float: left;"></h2></td><td><a href="#title_page" style="color: #878787;"><span class="material-symbols-outlined">home</span></a></td>
                 </tr>
             </table>
-            <h4>论仁</h4>
+            <p>论仁</p>
             <p>&nbsp;&nbsp;&nbsp;子曰：「不仁者，不可以久處約，不可以長處樂。仁者安仁，知者利仁。」</p>
             <p>&nbsp;&nbsp;&nbsp;子曰：「富與貴，是人之所欲也；不以其道得之，不處也。貧與賤，是人之所惡也；不以其道得之，不去也。君子去仁，惡乎成名？君子無終食之間違仁，造次必於是，顛沛必於是。」</p>
             <p>&nbsp;&nbsp;&nbsp;顏淵問仁。子曰：「克己復禮為仁。一日克己復禮，天下歸仁焉。為仁由己，而由人乎哉？」顏淵曰：「請問其目。」子曰：「非禮勿視，非禮勿聽，非禮勿言，非禮勿動。」顏淵曰：「回雖不敏，請事斯語矣。」</p>
@@ -325,7 +355,7 @@
         </div>
 
         <div class="same_between">
-            <h2 id="teacher_said">山居秋暝</h2>
+            <h2 id="mountain">山居秋暝</h2>
             <h3>王维&nbsp;&nbsp;唐朝</h3>
         <table>
             <tr>
@@ -340,7 +370,7 @@
 
         <br>
         <div class="same_between">
-            <h2 id="teacher_said">月下独酌(其一)</h2>
+            <h2 id="moon">月下独酌(其一)</h2>
             <h3>唐朝&nbsp;&nbsp;唐朝</h3>
         <table>
             <tr>
@@ -357,7 +387,7 @@
 
         <br>
         <div class="same_between">
-            <h2 id="teacher_said">登楼</h2>
+            <h2 id="house">登楼</h2>
             <h3>杜甫&nbsp;&nbsp;唐朝</h3>
         <table>
             <tr>
@@ -374,7 +404,7 @@
 
         <br>
         <div class="same_between">
-            <h2 id="teacher_said">念奴娇·赤壁怀古</h2>
+            <h2 id="chibi">念奴娇·赤壁怀古</h2>
             <h3>苏轼&nbsp;&nbsp;宋代</h3>
         <table>
             <tr>
@@ -390,7 +420,7 @@
 
         <br>
         <div class="same_between">
-            <h2 id="teacher_said">声声慢·寻寻觅觅</h2>
+            <h2 id="slow">声声慢·寻寻觅觅</h2>
             <h3>李清照&nbsp;&nbsp;宋代</h3>
         <table>
             <tr>
@@ -406,7 +436,7 @@
 
         <br>
         <div class="same_between">
-            <h2 id="teacher_said">青玉案·元夕</h2>
+            <h2 id="first_day">青玉案·元夕</h2>
             <h3>辛弃疾&nbsp;&nbsp;宋代</h3>
         <table>
             <tr>
@@ -434,12 +464,13 @@
         //     <p>&nbsp;&nbsp;&nbsp;</p>
         // </div>
         // postMessage("google.com")
-        let put_the_articl="东风夜放花千树更吹落星如雨宝马雕车香满路凤箫声动玉壶光转一夜鱼龙舞蛾儿雪柳黄金缕笑语盈盈暗香去众里寻他千百度蓦然回首那人却在灯火阑珊处"
+        let put_the_articl=""
         console.log(put_the_articl.length)
 
         let night=document.getElementById("night")
         let light=document.getElementById("light")
         let title_page=document.getElementById("title_page")
+        let big_title_page=document.getElementById("big_title_page")
         let background_color=document.getElementById("background_color")
         let dog=document.getElementById("dog")
         let tu=document.getElementById("tu")
@@ -455,6 +486,13 @@
         let hiking_word=document.getElementById("hiking_word")
         let hahaha_word=document.getElementById("hahaha_word")
         let fish_me_want_word=document.getElementById("fish_me_want_word")
+        let mountain_word=document.getElementById("mountain_word")
+        let moon_word=document.getElementById("moon_word")
+        let house_word=document.getElementById("house_word")
+        let chibi_word=document.getElementById("chibi_word")
+        let slow_word=document.getElementById("slow_word")
+        let first_day_word=document.getElementById("first_day_word")
+        // let 
 
         // if(window.innerWidth==394 || window.innerWidth==393){
         //     tu.style.display="flex"
@@ -470,6 +508,9 @@
             background_color.style.backgroundColor=dark
             night.style.color=white
             night.style.display="none"
+
+            big_title_page.style.transitionDuration=time
+            big_title_page.style.color=white
 
             light.style.display="flex"
 
@@ -493,6 +534,24 @@
             fish_me_want_word.style.transitionDuration=time
             fish_me_want_word.style.color=white
 
+            mountain_word.style.transitionDuration=time
+            mountain_word.style.color=white
+
+            moon_word.style.transitionDuration=time
+            moon_word.style.color=white
+
+            house_word.style.transitionDuration=time
+            house_word.style.color=white
+
+            chibi_word.style.transitionDuration=time
+            chibi_word.style.color=white
+
+            slow_word.style.transitionDuration=time
+            slow_word.style.color=white
+
+            first_day_word.style.transitionDuration=time
+            first_day_word.style.color=white
+
             if(window.innerWidth>1000){
                 a.style.transitionDuration=time
                 a.style.color=white
@@ -506,6 +565,9 @@
             background_color.style.backgroundColor=white
             night.style.color="#000000"
             light.style.display="none"
+
+            big_title_page.style.transitionDuration=time
+            big_title_page.style.color=black
 
             night.style.display="flex"
 
@@ -528,6 +590,24 @@
 
             fish_me_want_word.style.transitionDuration=time
             fish_me_want_word.style.color=black
+
+            mountain_word.style.transitionDuration=time
+            mountain_word.style.color=black
+
+            moon_word.style.transitionDuration=time
+            moon_word.style.color=black
+
+            house_word.style.transitionDuration=time
+            house_word.style.color=black
+
+            chibi_word.style.transitionDuration=time
+            chibi_word.style.color=black
+
+            slow_word.style.transitionDuration=time
+            slow_word.style.color=black
+
+            first_day_word.style.transitionDuration=time
+            first_day_word.style.color=black
 
             if(window.innerWidth>1000){
                 a.style.transitionDuration=time
