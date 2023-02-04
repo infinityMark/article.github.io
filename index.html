@@ -148,6 +148,53 @@
             z-index: 999;
             display: none;
         }
+        .verse{
+            display: inline;
+        }
+        .for_verse{
+            text-align: center;
+        }
+
+        @media only screen and (min-width: 1000px){
+            #title_page{
+                border-left: 14px solid #123B57;
+                font-size: 40px;
+            }
+            .material-symbols-outlined{
+                font-size: 100px;
+            }
+            .important_number{
+                font-size: 40px;
+            }
+            #a{
+                font-size: 36px;
+                display: inline;
+                top: 20%;
+                left: 5%;
+                color: #000000;
+            }
+            #b{
+                font-size: 36px;
+                display: inline;
+                top: 30%;
+                left: 5%;
+                color: #000000;
+                margin-left: 0px;
+            }
+
+            #article_choose{
+                width: 70%;
+                float: right;
+            }
+            #for_article{
+                width: 80%;
+                float: right;
+                margin-top: 200px;
+            }
+            .verse{
+                display: none;
+            }
+        }
     </style>
 </head>
 <body id="background_color">
@@ -165,6 +212,7 @@
         <span class="material-symbols-outlined" id="light">light_mode</span>
     </div>
     <br>
+    <br>
     <div id="article_choose">
         <table>
             <tr>
@@ -176,6 +224,16 @@
                 <td><a href="#hahaha"><p id="hahaha_word">论仁论孝论君子</p></a></td>
                 <td><a href="#fish_me_want"><p id="fish_me_want_word">鱼我所欲</p></a></td>
                 <!-- <td><a href="#hahaha"><p>诗三首</p></a></td> -->
+            </tr>
+            <tr>
+                <td><a href=""><p>山居秋暝</p></a></td>
+                <td><a href=""><p>月下独酌</p></a></td>
+                <td><a href=""><p>登楼</p></a></td>
+            </tr>
+            <tr>
+                <td><a href=""><p>念奴娇·赤壁怀古</p></a></td>
+                <td><a href=""><p>声声慢·寻寻觅觅</p></a></td>
+                <td><a href=""><p>青玉案·元夕</p></a></td>
             </tr>
         </table>
     </div>
@@ -195,7 +253,7 @@
             <p>&nbsp;&nbsp;&nbsp;圣人无常师。孔子师郯子、苌弘、师襄、老聃。郯子之徒，其贤不及孔子。孔子曰：三人行，则必有我师。是故弟子不必不如师，师不必贤于弟子，闻道有先后，术业有专攻，如是而已。</p>
             <p>&nbsp;&nbsp;&nbsp;李氏子蟠，年十七，好古文，六艺经传皆通习之，不拘于时，学于余。余嘉其能行古道，作《师说》以贻之。</p>
         </div>
-
+        <br>
         <div class="same_between">
             <h2 id="house_said">岳阳楼记</h2>
             <h3>范仲淹&nbsp;&nbsp;[宋代]</h3>
@@ -211,7 +269,7 @@
             <p>&nbsp;&nbsp;&nbsp;嗟夫！予尝求古仁人之心，或异二者之为，何哉？不以物喜，不以己悲，居庙堂之高则忧其民，处江湖之远则忧其君。是进亦忧，退亦忧。然则何时而乐耶？其必曰“先天下之忧而忧，后天下之乐而乐”乎！噫！微斯人，吾谁与归？</p>
             <p>&nbsp;&nbsp;&nbsp;时六年九月十五日。</p>
         </div>
-
+        <br>
         <div class="same_between">
             <h2 id="hiking">始得西山宴游记</h2>
             <h3>柳宗元&nbsp;&nbsp;[唐朝]</h3>
@@ -223,6 +281,7 @@
             <p>&nbsp;&nbsp;&nbsp;自余为僇人，居是州，恒惴慄。其隟也，则施施而行，漫漫而游。日与其徒上高山，入深林，穷回溪，幽泉怪石，无远不到。到则披草而坐，倾壶而醉。醉则更相枕以卧，卧而梦。意有所极，梦亦同趣。觉而起，起而归；以为凡是州之山水有异态者，皆我有也，而未始知西山之怪特。</p>
             <p>&nbsp;&nbsp;&nbsp;今年九月二十八日，因坐法华西亭，望西山，始指异之。遂命仆人过湘江，缘染溪，斫榛莽，焚茅茷，穷山之高而止。攀援而登，箕踞而遨，则凡数州之土壤，皆在衽席之下。其高下之势，岈然洼然，若垤若穴，尺寸千里，攒蹙累积，莫得遁隐。萦青缭白，外与天际，四望如一。然后知是山之特立，不与培塿为类。悠悠乎与颢气俱，而莫得其涯；洋洋乎与造物者游，而不知其所穷。引觞满酌，颓然就醉，不知日之入。苍然暮色，自远而至，至无所见，而犹不欲归。心凝形释，与万化冥合。然后知吾向之未始游，游于是乎始。故为之文以志。是岁，元和四年也。</p>
         </div>
+        <br>
         <div class="same_between">
             <h2 id="hahaha">论仁论孝论君子</h2>
             <h3>&nbsp;&nbsp;</h3>
@@ -252,7 +311,7 @@
             <p>&nbsp;&nbsp;&nbsp;子曰：「君子病無能焉，不病人之不己知也。」</p>
             <p>&nbsp;&nbsp;&nbsp;子曰：「君子求諸己，小人求諸人。」</p>
         </div>
-
+        <br>
         <div class="same_between">
             <h2 id="fish_me_want">鱼我所欲</h2>
             <h3>&nbsp;&nbsp;孟子及其弟子〔先秦〕</h3>
@@ -264,6 +323,103 @@
             <p>&nbsp;&nbsp;&nbsp; <div style="display: inline;font-size: 30px;">鱼</div> ，我所欲也；熊掌，亦我所欲也。二者不可得兼，舍鱼而取熊掌者也。生，亦我所欲也；义，亦我所欲也。二者不可得兼，舍生而取义者也。生亦我所欲，所欲有甚于生者，故不为苟得也；死亦我所恶，所恶有甚于死者，故患有所不辟也。如使人之所欲莫甚于生，则凡可以得生者何不用也？使人之所恶莫甚于死者，则凡可以辟患者何不为也？由是则生而有不用也，由是则可以辟患而有不为也。是故所欲有甚于生者，所恶有甚于死者。非独贤者有是心也，人皆有之，贤者能勿丧耳。</p>
             <p>&nbsp;&nbsp;&nbsp;一箪食，一豆羹，得之则生，弗得则死。呼尔而与之，行道之人弗受；蹴尔而与之，乞人不屑也。万钟则不辩礼义而受之，万钟于我何加焉！为宫室之美、妻妾之奉、所识穷乏者得我与？乡为身死而不受，今为宫室之美为之；乡为身死而不受，今为妻妾之奉为之；乡为身死而不受，今为所识穷乏者得我而为之：是亦不可以已乎？此之谓失其本心。　(与 通 欤；乡 通 向；辟 通 避)</p>
         </div>
+
+        <div class="same_between">
+            <h2 id="teacher_said">山居秋暝</h2>
+            <h3>王维&nbsp;&nbsp;唐朝</h3>
+        <table>
+            <tr>
+                <td><h2 style="float: left;">约40字</h2></td><td><a href="#title_page" style="color: #878787;"><span class="material-symbols-outlined">home</span></a></td>
+            </tr>
+        </table>
+        <div class="for_verse">
+            <p>空山新雨后，天气晚来秋。<br class="verse">明月松间照，清泉石上流。</p>
+            <p>竹喧归浣女，莲动下渔舟。<br class="verse">随意春芳歇，王孙自可留。</p>    
+        </div>
+        </div>
+
+        <br>
+        <div class="same_between">
+            <h2 id="teacher_said">月下独酌(其一)</h2>
+            <h3>唐朝&nbsp;&nbsp;唐朝</h3>
+        <table>
+            <tr>
+                <td><h2 style="float: left;">约70字</h2></td><td><a href="#title_page" style="color: #878787;"><span class="material-symbols-outlined">home</span></a></td>
+            </tr>
+        </table>
+        <div class="for_verse">
+            <p>花间一壶酒，独酌无相亲。<br class="verse">举杯邀明月，对影成三人。</p>
+            <p>月既不解饮，影徒随我身。<br class="verse">暂伴月将影，行乐须及春。</p>
+            <p>我歌月徘徊，我舞影零乱。<br class="verse">醒时同交欢，醉后各分散。</p>
+            <p>永结无情游，相期邈云汉。<br class="verse"></p>
+        </div>
+        </div>
+
+        <br>
+        <div class="same_between">
+            <h2 id="teacher_said">登楼</h2>
+            <h3>杜甫&nbsp;&nbsp;唐朝</h3>
+        <table>
+            <tr>
+                <td><h2 style="float: left;">约56字</h2></td><td><a href="#title_page" style="color: #878787;"><span class="material-symbols-outlined">home</span></a></td>
+            </tr>
+        </table>
+        <div class="for_verse">
+            <p>花近高楼伤客心，<br class="verse">万方多难此登临。</p>
+            <p>锦江春色来天地，<br class="verse">玉垒浮云变古今。</p>
+            <p>北极朝廷终不改，<br class="verse">西山寇盗莫相侵。</p>
+            <p>可怜后主还祠庙，<br class="verse">日暮聊为《梁甫吟》。</p>
+        </div>
+        </div>
+
+        <br>
+        <div class="same_between">
+            <h2 id="teacher_said">念奴娇·赤壁怀古</h2>
+            <h3>苏轼&nbsp;&nbsp;宋代</h3>
+        <table>
+            <tr>
+                <td><h2 style="float: left;">约103字</h2></td><td><a href="#title_page" style="color: #878787;"><span class="material-symbols-outlined">home</span></a></td>
+            </tr>
+        </table>
+        <div class="for_verse">
+            <p>大江东去，浪淘尽，千古风流人物。<br class="verse">故垒西边，人道是，三国周郎赤壁。<br class="verse">乱石穿空，惊涛拍岸，卷起千堆雪。<br class="verse">江山如画，一时多少豪杰。</p>
+            <br>
+            <p>遥想公瑾当年，小乔初嫁了，雄姿英发。<br class="verse">羽扇纶巾，谈笑间，樯橹灰飞烟灭。<br class="verse">故国神游，多情应笑我，早生华发。<br class="verse">人生如梦，一尊还酹江月。</p>
+        </div>
+        </div>
+
+        <br>
+        <div class="same_between">
+            <h2 id="teacher_said">声声慢·寻寻觅觅</h2>
+            <h3>李清照&nbsp;&nbsp;宋代</h3>
+        <table>
+            <tr>
+                <td><h2 style="float: left;">约97字</h2></td><td><a href="#title_page" style="color: #878787;"><span class="material-symbols-outlined">home</span></a></td>
+            </tr>
+        </table>
+        <div class="for_verse">
+            <p>寻寻觅觅，冷冷清清，凄凄惨惨戚戚。<br class="verse">乍暖还寒时候，最难将息。<br class="verse">三杯两盏淡酒，怎敌他、晚来风急！<br class="verse">雁过也，正伤心，却是旧时相识。</p>
+            <br>
+            <p>满地黄花堆积，憔悴损，如今有谁堪摘？<br class="verse">守着窗儿，独自怎生得黑！<br class="verse">梧桐更兼细雨，到黄昏、点点滴滴。<br class="verse">这次第，怎一个愁字了得！</p>
+        </div>
+        </div>
+
+        <br>
+        <div class="same_between">
+            <h2 id="teacher_said">青玉案·元夕</h2>
+            <h3>辛弃疾&nbsp;&nbsp;宋代</h3>
+        <table>
+            <tr>
+                <td><h2 style="float: left;">约67字</h2></td><td><a href="#title_page" style="color: #878787;"><span class="material-symbols-outlined">home</span></a></td>
+            </tr>
+        </table>
+        <div class="for_verse">
+            <p>东风夜放花千树，更吹落、星如雨。宝马雕车香满路。凤箫声动，玉壶光转，一夜鱼龙舞。</p>
+            <br>
+            <p>蛾儿雪柳黄金缕，笑语盈盈暗香去。众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。</p>
+        </div>
+        </div>
+
     </div>
 
     <script>
@@ -278,7 +434,7 @@
         //     <p>&nbsp;&nbsp;&nbsp;</p>
         // </div>
         // postMessage("google.com")
-        let put_the_articl=""
+        let put_the_articl="东风夜放花千树更吹落星如雨宝马雕车香满路凤箫声动玉壶光转一夜鱼龙舞蛾儿雪柳黄金缕笑语盈盈暗香去众里寻他千百度蓦然回首那人却在灯火阑珊处"
         console.log(put_the_articl.length)
 
         let night=document.getElementById("night")
@@ -336,6 +492,14 @@
 
             fish_me_want_word.style.transitionDuration=time
             fish_me_want_word.style.color=white
+
+            if(window.innerWidth>1000){
+                a.style.transitionDuration=time
+                a.style.color=white
+
+                b.style.transitionDuration=time
+                b.style.color=white
+            }
         })
         light.addEventListener("click",function(){
             background_color.style.transitionDuration="1s"
@@ -364,6 +528,14 @@
 
             fish_me_want_word.style.transitionDuration=time
             fish_me_want_word.style.color=black
+
+            if(window.innerWidth>1000){
+                a.style.transitionDuration=time
+                a.style.color="#000000"
+
+                b.style.transitionDuration=time
+                b.style.color="#000000"
+            }
         })
 
         let a=document.getElementById("a")
